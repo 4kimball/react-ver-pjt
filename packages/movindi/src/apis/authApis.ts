@@ -1,8 +1,8 @@
 import request from '../networks';
 
-const baseURL = '';
+const baseURL = 'http://127.0.0.1:8000/api/v1';
 
-export const login = async (credentials) => {
+export const login = async (credentials: object) => {
   const url = baseURL + '/token';
 
   try {
@@ -17,8 +17,8 @@ export const logout = async () => {
   sessionStorage.removeItem('accessToken');
 };
 
-export const signup = async (credentials) => {
-  const url = baseURL + '/accounts/signup';
+export const signup = async (credentials: object) => {
+  const url = baseURL + '/accounts/signup/';
 
   try {
     const response = await request('post', url, null, credentials, null);

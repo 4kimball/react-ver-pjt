@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardContent } from '@material-ui/core';
 import { Page } from '../../ui';
+import SignupForm from './SignupForm';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,6 +31,7 @@ function Signup() {
       <Card className={classes.card}>
         <CardContent className={classes.content}>
           <h1>Signup</h1>
+          <SignupForm />
         </CardContent>
       </Card>
     </Page>
